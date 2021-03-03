@@ -1,0 +1,38 @@
+mkdir: cannot create directory ‘/home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_twitter’: File exists
+mkdir: cannot create directory ‘/home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_twitter/VMAs’: File exists
+mkdir: cannot create directory ‘/home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_twitter’: File exists
+mkdir: cannot create directory ‘/home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_twitter’: File exists
+mkdir: cannot create directory ‘/home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_kron’: File exists
+
+
+mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_twitter
+mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_twitter/VMAs
+pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_twitter/pr_twitter -- ./pr_st -f benchmark/graphs/twitter.sg -i1000 -t1e-4 -n16  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_twitter/op_2M 
+mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_twitter
+mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_twitter/VMAs
+pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_twitter/cc_twitter -- ./cc_st -f benchmark/graphs/twitter.sg -n16  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_twitter/op_2M 
+mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_twitter
+mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_twitter/VMAs
+pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_twitter/bc_twitter -- ./bc_st -f benchmark/graphs/twitter.sg -i4 -n16  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_twitter/op_2M 
+
+
+
+
+#wget -P benchmark/graphs/raw http://www.dis.uniroma1.it/challenge9/data/USA-road-d/USA-road-d.USA.gr.gz
+#cd benchmark/graphs/raw
+#gunzip < benchmark/graphs/raw/USA-road-d.USA.gr.gz > benchmark/graphs/raw/USA-road-d.USA.gr
+
+
+./converter_st -f benchmark/graphs/raw/USA-road-d.USA.gr -b benchmark/graphs/road.sg
+Read Time:           18.68740
+Build Time:          1.22668
+Graph has 23947347 nodes and 57708624 directed edges for degree: 2
+
+
+./converter_st -g27 -k16 -b benchmark/graphs/kron.sg
+Generate Time:       1013.93374
+Build Time:          1508.26127
+Graph has 134217726 nodes and 2111632322 undirected edges for degree: 15
+mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_kron
+mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_kron/VMAs
+pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_kron/pr_kron -- ./pr_st -f benchmark/graphs/kron.sg -i1000 -t1e-4 -n16  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_kron/op_2M 

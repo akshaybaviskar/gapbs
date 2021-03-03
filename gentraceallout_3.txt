@@ -1,0 +1,98 @@
+mkdir: cannot create directory ‘/home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/sssp_kron’: File exists
+gentraceall_3.sh: line 279:  1628 Segmentation fault      (core dumped) pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c3
+1-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs
+-radix/benchmarks/sssp_kron/sssp_kron -- ./sssp_st -f benchmark/graphs/kron.wsg -n64 -d2 > /home/akshaybavisk/work/Yaniv/home/i
+danyani/hash-vs-radix/benchmarks/sssp_kron/op_2M
+mkdir: cannot create directory ‘/home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/sssp_urand’: File exists
+gentraceall_3.sh: line 293:  3813 Segmentation fault      (core dumped) pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c3
+1-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs
+-radix/benchmarks/sssp_urand/sssp_urand -- ./sssp_st -f benchmark/graphs/urand.wsg -n64 -d2 > /home/akshaybavisk/work/Yaniv/hom
+e/idanyani/hash-vs-radix/benchmarks/sssp_urand/op_2M
+
+
+
+
+
+#wget -P benchmark/graphs/raw http://www.dis.uniroma1.it/challenge9/data/USA-road-d/USA-road-d.USA.gr.gz
+#cd benchmark/graphs/raw
+#gunzip < benchmark/graphs/raw/USA-road-d.USA.gr.gz > benchmark/graphs/raw/USA-road-d.USA.gr
+
+
+./converter_st -f benchmark/graphs/raw/USA-road-d.USA.gr -b benchmark/graphs/road.sg
+Read Time:           18.68170
+Build Time:          1.17838
+Graph has 23947347 nodes and 57708624 directed edges for degree: 2
+
+
+./converter_st -g27 -k16 -b benchmark/graphs/kron.sg
+Generate Time:       1016.44274
+Build Time:          1067.88602
+Graph has 134217726 nodes and 2111632322 undirected edges for degree: 15
+
+
+rm -f benchmark/graphs/kronU.sg
+ln -s kron.sg benchmark/graphs/kronU.sg
+
+
+./converter_st -u27 -k16 -b benchmark/graphs/urand.sg
+Generate Time:       117.98113
+Build Time:          1095.52556
+Graph has 134217728 nodes and 2147483370 undirected edges for degree: 15
+
+
+rm -f benchmark/graphs/urandU.sg
+ln -s urand.sg benchmark/graphs/urandU.sg
+
+
+./converter_st -f benchmark/graphs/raw/twitter.el -wb benchmark/graphs/twitter.wsg
+Read Time:           338.27845
+Build Time:          416.00212
+Graph has 61578415 nodes and 1468364884 directed edges for degree: 23
+
+
+./converter_st -f benchmark/graphs/raw/sk-2005/sk-2005.mtx -wb benchmark/graphs/web.wsg
+Read Time:           1070.05837
+Build Time:          125.01370
+Graph has 50636151 nodes and 1930292948 directed edges for degree: 38
+
+
+./converter_st -f benchmark/graphs/raw/USA-road-d.USA.gr -wb benchmark/graphs/road.wsg
+Read Time:           18.95484
+Build Time:          1.54595
+Graph has 23947347 nodes and 57708624 directed edges for degree: 2
+
+
+./converter_st -g27 -k16 -wb benchmark/graphs/kron.wsg
+Generate Time:       1021.49341
+Build Time:          1465.47745
+Graph has 134217726 nodes and 2111632322 undirected edges for degree: 15
+mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/sssp_kron
+mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/sssp_kron/VMAs
+pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/sssp_kron/sssp_kron -- ./sssp_st -f benchmark/graphs/kron.wsg -n64 -d2  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/sssp_kron/op_2M 
+
+
+./converter_st -u27 -k16 -wb benchmark/graphs/urand.wsg
+Generate Time:       125.60971
+Build Time:          2053.19063
+Graph has 134217728 nodes and 2147483370 undirected edges for degree: 15
+mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/sssp_urand
+mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/sssp_urand/VMAs
+pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/sssp_urand/sssp_urand -- ./sssp_st -f benchmark/graphs/urand.wsg -n64 -d2  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/sssp_urand/op_2M 
+
+
+./converter_st -sf benchmark/graphs/raw/twitter.el -b benchmark/graphs/twitterU.sg
+Read Time:           322.71518
+Build Time:          358.54881
+Graph has 61578415 nodes and 1202513046 undirected edges for degree: 19
+
+
+./converter_st -sf benchmark/graphs/raw/sk-2005/sk-2005.mtx -b benchmark/graphs/webU.sg
+Read Time:           1078.50979
+Build Time:          47.71798
+Graph has 50636151 nodes and 1810063330 undirected edges for degree: 35
+
+
+./converter_st -sf benchmark/graphs/raw/USA-road-d.USA.gr -b benchmark/graphs/roadU.sg
+Read Time:           18.71779
+Build Time:          0.89400
+Graph has 23947347 nodes and 28854312 undirected edges for degree: 1
