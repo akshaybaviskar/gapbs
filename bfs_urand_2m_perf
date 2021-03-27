@@ -1,0 +1,18 @@
+signalling readyness to /tmp/alloctest-graph.ready
+signalling done to /tmp/alloctest-graph.done
+
+ Performance counter stats for './bfs_st -f benchmark/graphs/urand.sg -n64':
+
+      780408682127      inst_retired.any_p:u                                          (50.00%)
+      174308205629      mem_inst_retired.all_loads:u                                     (50.00%)
+       29847293135      mem_inst_retired.all_stores:u                                     (50.00%)
+        2312232026      dtlb_store_misses.stlb_hit:u                                     (50.00%)
+        9029305869      dtlb_load_misses.stlb_hit:u                                     (50.00%)
+         178820289      mem_inst_retired.stlb_miss_loads:u                                     (40.00%)
+           3715450      mem_inst_retired.stlb_miss_stores:u                                     (40.00%)
+         451469023      dtlb_store_misses.walk_pending:u                                     (40.00%)
+       36774562369      dtlb_load_misses.walk_pending:u                                     (40.00%)
+     1701523841184      cycles:u                                                      (40.00%)
+
+     592.797892874 seconds time elapsed
+
