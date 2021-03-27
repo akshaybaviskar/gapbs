@@ -6,6 +6,7 @@
 #include <iostream>
 #include <queue>
 #include <vector>
+#include <unistd.h>
 
 #include "benchmark.h"
 #include "builder.h"
@@ -192,6 +193,7 @@ bool SSSPVerifier(const WGraph &g, NodeID source,
 
 
 int main(int argc, char* argv[]) {
+   cout<<"PID : "<<getpid()<<endl;
   CLDelta<WeightT> cli(argc, argv, "single-source shortest-path");
   if (!cli.ParseArgs())
     return -1;
@@ -205,6 +207,30 @@ int main(int argc, char* argv[]) {
   auto VerifierBound = [&vsp] (const WGraph &g, const pvector<WeightT> &dist) {
     return SSSPVerifier(g, vsp.PickNext(), dist);
   };
-  BenchmarkKernel(cli, g, SSSPBound, PrintSSSPStats, VerifierBound);
-  return 0;
+    /*****************************/
+       #define CONFIG_SHM_FILE_NAME "/tmp/alloctest-graph"
+      fprintf (stderr,"signalling readyness to %s\n", CONFIG_SHM_FILE_NAME ".ready");
+       FILE *fd2 = fopen(CONFIG_SHM_FILE_NAME ".ready", "w");
+ 
+      if (fd2 == NULL) {
+          fprintf (stderr, "ERROR: could not create the shared memory file descriptor\n");
+          exit(-1);
+      }
+ 
+      usleep(250);
+   /*******************************************/ 
+
+ BenchmarkKernel(cli, g, SSSPBound, PrintSSSPStats, VerifierBound);
+   /************************************/
+       #define CONFIG_SHM_FILE_NAME "/tmp/alloctest-graph"
+      fprintf (stderr,"signalling done to %s\n", CONFIG_SHM_FILE_NAME ".done");
+       FILE *fd1 = fopen(CONFIG_SHM_FILE_NAME ".done", "w");
+ 
+      if (fd1 == NULL) {
+          fprintf (stderr, "ERROR: could not create the shared memory file descriptor\n");
+          exit(-1);
+      }
+  /****************************************/
+
+ return 0;
 }

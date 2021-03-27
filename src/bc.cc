@@ -4,6 +4,8 @@
 #include <functional>
 #include <iostream>
 #include <vector>
+#include <unistd.h>
+
 
 #include "benchmark.h"
 #include "bitmap.h"
@@ -227,6 +229,7 @@ bool BCVerifier(const Graph &g, SourcePicker<Graph> &sp, NodeID num_iters,
 
 
 int main(int argc, char* argv[]) {
+  cout<<"PID : "<<getpid()<<endl;
   CLIterApp cli(argc, argv, "betweenness-centrality", 1);
   if (!cli.ParseArgs())
     return -1;
@@ -242,6 +245,34 @@ int main(int argc, char* argv[]) {
                                      const pvector<ScoreT> &scores) {
     return BCVerifier(g, vsp, cli.num_iters(), scores);
   };
+
+   /*****************************/
+       #define CONFIG_SHM_FILE_NAME "/tmp/alloctest-bc_rw"
+      fprintf (stderr,"signalling readyness to %s\n", CONFIG_SHM_FILE_NAME ".ready");
+       FILE *fd2 = fopen(CONFIG_SHM_FILE_NAME ".ready", "w");
+ 
+      if (fd2 == NULL) {
+          fprintf (stderr, "ERROR: could not create the shared memory file descriptor\n");
+          exit(-1);
+      }
+ 
+      usleep(250);
+   /*******************************************/ 
+
+
   BenchmarkKernel(cli, g, BCBound, PrintTopScores, VerifierBound);
+
+  /************************************/
+       #define CONFIG_SHM_FILE_NAME "/tmp/alloctest-bc_rw"
+      fprintf (stderr,"signalling done to %s\n", CONFIG_SHM_FILE_NAME ".done");
+       FILE *fd1 = fopen(CONFIG_SHM_FILE_NAME ".done", "w");
+ 
+      if (fd1 == NULL) {
+          fprintf (stderr, "ERROR: could not create the shared memory file descriptor\n");
+          exit(-1);
+      }
+  /****************************************/
+
+
   return 0;
 }

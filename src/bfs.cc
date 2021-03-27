@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include <unistd.h>
 
 #include "benchmark.h"
 #include "bitmap.h"
@@ -242,17 +243,48 @@ bool BFSVerifier(const Graph &g, NodeID source,
 
 
 int main(int argc, char* argv[]) {
+
+  cout<<"PID : "<<getpid()<<endl;
   CLApp cli(argc, argv, "breadth-first search");
   if (!cli.ParseArgs())
     return -1;
   Builder b(cli);
   Graph g = b.MakeGraph();
   SourcePicker<Graph> sp(g, cli.start_vertex());
+
+
   auto BFSBound = [&sp] (const Graph &g) { return DOBFS(g, sp.PickNext()); };
+
   SourcePicker<Graph> vsp(g, cli.start_vertex());
   auto VerifierBound = [&vsp] (const Graph &g, const pvector<NodeID> &parent) {
     return BFSVerifier(g, vsp.PickNext(), parent);
   };
-  BenchmarkKernel(cli, g, BFSBound, PrintBFSStats, VerifierBound);
-  return 0;
+
+   /*****************************/
+       #define CONFIG_SHM_FILE_NAME "/tmp/alloctest-graph"
+      fprintf (stderr,"signalling readyness to %s\n", CONFIG_SHM_FILE_NAME ".ready");
+       FILE *fd2 = fopen(CONFIG_SHM_FILE_NAME ".ready", "w");
+ 
+      if (fd2 == NULL) {
+          fprintf (stderr, "ERROR: could not create the shared memory file descriptor\n");
+          exit(-1);
+      }
+ 
+      usleep(250);
+   /*******************************************/ 
+
+   BenchmarkKernel(cli, g, BFSBound, PrintBFSStats, VerifierBound);
+  
+  /************************************/
+       #define CONFIG_SHM_FILE_NAME "/tmp/alloctest-graph"
+      fprintf (stderr,"signalling done to %s\n", CONFIG_SHM_FILE_NAME ".done");
+       FILE *fd1 = fopen(CONFIG_SHM_FILE_NAME ".done", "w");
+ 
+      if (fd1 == NULL) {
+          fprintf (stderr, "ERROR: could not create the shared memory file descriptor\n");
+          exit(-1);
+      }
+  /****************************************/
+
+return 0;
 }

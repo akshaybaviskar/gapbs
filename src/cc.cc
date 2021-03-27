@@ -6,6 +6,7 @@
 #include <iostream>
 #include <unordered_map>
 #include <vector>
+#include <unistd.h>
 
 #include "benchmark.h"
 #include "bitmap.h"
@@ -216,12 +217,38 @@ bool CCVerifier(const Graph &g, const pvector<NodeID> &comp) {
 
 
 int main(int argc, char* argv[]) {
+   cout<<"PID : "<<getpid()<<endl;
   CLApp cli(argc, argv, "connected-components-afforest");
   if (!cli.ParseArgs())
     return -1;
   Builder b(cli);
   Graph g = b.MakeGraph();
   auto CCBound = [](const Graph& gr){ return Afforest(gr); };
+   /*****************************/
+       #define CONFIG_SHM_FILE_NAME "/tmp/alloctest-cc_rw"
+      fprintf (stderr,"signalling readyness to %s\n", CONFIG_SHM_FILE_NAME ".ready");
+       FILE *fd2 = fopen(CONFIG_SHM_FILE_NAME ".ready", "w");
+ 
+      if (fd2 == NULL) {
+          fprintf (stderr, "ERROR: could not create the shared memory file descriptor\n");
+          exit(-1);
+      }
+ 
+      usleep(250);
+   /*******************************************/ 
+
+
   BenchmarkKernel(cli, g, CCBound, PrintCompStats, CCVerifier);
-  return 0;
+   /************************************/
+       #define CONFIG_SHM_FILE_NAME "/tmp/alloctest-cc_rw"
+      fprintf (stderr,"signalling done to %s\n", CONFIG_SHM_FILE_NAME ".done");
+       FILE *fd1 = fopen(CONFIG_SHM_FILE_NAME ".done", "w");
+ 
+      if (fd1 == NULL) {
+          fprintf (stderr, "ERROR: could not create the shared memory file descriptor\n");
+          exit(-1);
+      }
+  /****************************************/
+
+ return 0;
 }

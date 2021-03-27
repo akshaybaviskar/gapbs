@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <iostream>
 #include <vector>
+#include <unistd.h>
 
 #include "benchmark.h"
 #include "builder.h"
@@ -94,7 +95,8 @@ bool PRVerifier(const Graph &g, const pvector<ScoreT> &scores,
 
 
 int main(int argc, char* argv[]) {
-  CLPageRank cli(argc, argv, "pagerank", 1e-4, 20);
+    cout<<"PID : "<<getpid()<<endl;
+ CLPageRank cli(argc, argv, "pagerank", 1e-4, 20);
   if (!cli.ParseArgs())
     return -1;
   Builder b(cli);
@@ -105,6 +107,30 @@ int main(int argc, char* argv[]) {
   auto VerifierBound = [&cli] (const Graph &g, const pvector<ScoreT> &scores) {
     return PRVerifier(g, scores, cli.tolerance());
   };
-  BenchmarkKernel(cli, g, PRBound, PrintTopScores, VerifierBound);
-  return 0;
+    /*****************************/
+       #define CONFIG_SHM_FILE_NAME "/tmp/alloctest-pr_rw"
+      fprintf (stderr,"signalling readyness to %s\n", CONFIG_SHM_FILE_NAME ".ready");
+       FILE *fd2 = fopen(CONFIG_SHM_FILE_NAME ".ready", "w");
+ 
+      if (fd2 == NULL) {
+          fprintf (stderr, "ERROR: could not create the shared memory file descriptor\n");
+          exit(-1);
+      }
+ 
+      usleep(250);
+   /*******************************************/ 
+
+ BenchmarkKernel(cli, g, PRBound, PrintTopScores, VerifierBound);
+   /************************************/
+       #define CONFIG_SHM_FILE_NAME "/tmp/alloctest-pr_rw"
+      fprintf (stderr,"signalling done to %s\n", CONFIG_SHM_FILE_NAME ".done");
+       FILE *fd1 = fopen(CONFIG_SHM_FILE_NAME ".done", "w");
+ 
+      if (fd1 == NULL) {
+          fprintf (stderr, "ERROR: could not create the shared memory file descriptor\n");
+          exit(-1);
+      }
+  /****************************************/
+
+ return 0;
 }
