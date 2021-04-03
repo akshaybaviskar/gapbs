@@ -9,7 +9,7 @@ using namespace std;
 int main()
 {
    ifstream ifile("bench-run-st.sh");
-   ofstream ofile("gentraceall.sh");
+   ofstream ofile("gentraceall_rw.sh");
 
 //   string perfcmd = " perf stat -e inst_retired.any_p:u,mem_inst_retired.all_loads:u,mem_inst_retired.all_stores:u,dtlb_store_misses.stlb_hit:u,dtlb_load_misses.stlb_hit:u,mem_inst_retired.stlb_miss_loads:u,mem_inst_retired.stlb_miss_stores:u,dtlb_store_misses.walk_pending:u,dtlb_load_misses.walk_pending:u,cycles:u ";
 
@@ -41,15 +41,15 @@ int main()
 
       ofile<<"######### "<<dirname<<" ############"<<endl;
       
-      ofile<<"#mkdir "<<bmpath<<dirname<<endl;
+      //ofile<<"#mkdir "<<bmpath<<dirname<<endl;
       ofile<<"#echo \"mkdir "<<bmpath<<dirname<<"\""<<endl;
 
-      ofile<<"#mkdir "<<bmpath<<dirname<<"/VMAs"<<endl;
-      ofile<<"#echo \"mkdir "<<bmpath<<dirname<<"/VMAs\""<<endl;
+      //ofile<<"#mkdir "<<bmpath<<dirname<<"/VMAs_rw"<<endl;
+      ofile<<"#echo \"mkdir "<<bmpath<<dirname<<"/VMAs_rw\""<<endl;
 
 
-      ofile<<"#echo \""<<pincmd<<dirname<<"/"<<dirname<<" -- "<<line.substr(0, pos3)<<" > "<<bmpath<<dirname<<"/op_2M \""<<endl;
-      ofile<<"#"<<pincmd<<dirname<<"/"<<dirname<<" -- "<<line.substr(0, pos3)<<" > "<<bmpath<<dirname<<"/op_2M "<<endl;
+      ofile<<"#echo \""<<pincmd<<dirname<<"/"<<dirname<<"_rw -- "<<line.substr(0, pos3)<<" > "<<bmpath<<dirname<<"/op_2M_rw \""<<endl;
+      //ofile<<"#"<<pincmd<<dirname<<"/"<<dirname<<"_rw -- "<<line.substr(0, pos3)<<" > "<<bmpath<<dirname<<"/op_2M_rw "<<endl;
       ofile<<"######### "<<dirname<<" finish ###########"<<endl;
    }
 

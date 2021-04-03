@@ -5,6 +5,8 @@
 #include <cinttypes>
 #include <iostream>
 #include <vector>
+#include <unistd.h>
+
 
 #include "benchmark.h"
 #include "builder.h"
@@ -124,6 +126,7 @@ bool TCVerifier(const Graph &g, size_t test_total) {
 
 
 int main(int argc, char* argv[]) {
+   cout<<"PID : "<<getpid()<<endl;
   CLApp cli(argc, argv, "triangle count");
   if (!cli.ParseArgs())
     return -1;

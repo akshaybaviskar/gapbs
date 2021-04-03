@@ -174,14 +174,14 @@
 #
 #echo "./converter_st -u27 -k16 -b benchmark/graphs/urand.sg"
 #./converter_st -u27 -k16 -b benchmark/graphs/urand.sg
-######### bfs_urand ############
-#mkdir /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_urand
-#echo "mkdir /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_urand"
-#echo " perf stat -e mem_inst_retired.all_loads:u,mem_inst_retired.all_stores:u,mem_inst_retired.stlb_miss_loads:u,mem_inst_retired.stlb_miss_stores:u ./bfs_st -f benchmark/graphs/urand.sg -n64  > /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_urand/op_4kv  2> /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_urand/4k-4k-perf1"
-# perf stat -e mem_inst_retired.all_loads:u,mem_inst_retired.all_stores:u,mem_inst_retired.stlb_miss_loads:u,mem_inst_retired.stlb_miss_stores:u ./bfs_st -f benchmark/graphs/urand.sg -n64  > /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_urand/op_4kv  2> /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_urand/4k-4k-perf1
-#echo " perf stat -e cycles:u,dtlb_store_misses.walk_pending:u,dtlb_load_misses.walk_pending:u,ept.walk_pending:u ./bfs_st -f benchmark/graphs/urand.sg -n64  > /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_urand/op_4kv  2> /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_urand/4k-4k-perf2"
-# perf stat -e cycles:u,dtlb_store_misses.walk_pending:u,dtlb_load_misses.walk_pending:u,ept.walk_pending:u ./bfs_st -f benchmark/graphs/urand.sg -n64  > /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_urand/op_4kv  2> /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_urand/4k-4k-perf2
-######### bfs_urand finish ###########
+######## bfs_urand ############
+mkdir /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_urand
+echo "mkdir /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_urand"
+echo " perf stat -e mem_inst_retired.all_loads:u,mem_inst_retired.all_stores:u,mem_inst_retired.stlb_miss_loads:u,mem_inst_retired.stlb_miss_stores:u ./bfs_st -f benchmark/graphs/urand.sg -n64  > /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_urand/op_4kv  2> /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_urand/4k-4k-perf1"
+ perf stat -e mem_inst_retired.all_loads:u,mem_inst_retired.all_stores:u,mem_inst_retired.stlb_miss_loads:u,mem_inst_retired.stlb_miss_stores:u ./bfs_st -f benchmark/graphs/urand.sg -n64  > /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_urand/op_4kv  2> /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_urand/4k-4k-perf1
+echo " perf stat -e cycles:u,dtlb_store_misses.walk_pending:u,dtlb_load_misses.walk_pending:u,ept.walk_pending:u ./bfs_st -f benchmark/graphs/urand.sg -n64  > /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_urand/op_4kv  2> /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_urand/4k-4k-perf2"
+ perf stat -e cycles:u,dtlb_store_misses.walk_pending:u,dtlb_load_misses.walk_pending:u,ept.walk_pending:u ./bfs_st -f benchmark/graphs/urand.sg -n64  > /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_urand/op_4kv  2> /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_urand/4k-4k-perf2
+######## bfs_urand finish ###########
 ######### pr_urand ############
 #mkdir /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_urand
 #echo "mkdir /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_urand"
@@ -190,22 +190,22 @@
 #echo " perf stat -e cycles:u,dtlb_store_misses.walk_pending:u,dtlb_load_misses.walk_pending:u,ept.walk_pending:u ./pr_st -f benchmark/graphs/urand.sg -i1000 -t1e-4 -n16  > /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_urand/op_4kv  2> /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_urand/4k-4k-perf2"
 # perf stat -e cycles:u,dtlb_store_misses.walk_pending:u,dtlb_load_misses.walk_pending:u,ept.walk_pending:u ./pr_st -f benchmark/graphs/urand.sg -i1000 -t1e-4 -n16  > /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_urand/op_4kv  2> /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_urand/4k-4k-perf2
 ######### pr_urand finish ###########
-######## cc_urand ############
-mkdir /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_urand
-echo "mkdir /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_urand"
-echo " perf stat -e mem_inst_retired.all_loads:u,mem_inst_retired.all_stores:u,mem_inst_retired.stlb_miss_loads:u,mem_inst_retired.stlb_miss_stores:u ./cc_st -f benchmark/graphs/urand.sg -n16  > /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_urand/op_4kv  2> /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_urand/4k-4k-perf1"
- perf stat -e mem_inst_retired.all_loads:u,mem_inst_retired.all_stores:u,mem_inst_retired.stlb_miss_loads:u,mem_inst_retired.stlb_miss_stores:u ./cc_st -f benchmark/graphs/urand.sg -n16  > /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_urand/op_4kv  2> /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_urand/4k-4k-perf1
-echo " perf stat -e cycles:u,dtlb_store_misses.walk_pending:u,dtlb_load_misses.walk_pending:u,ept.walk_pending:u ./cc_st -f benchmark/graphs/urand.sg -n16  > /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_urand/op_4kv  2> /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_urand/4k-4k-perf2"
- perf stat -e cycles:u,dtlb_store_misses.walk_pending:u,dtlb_load_misses.walk_pending:u,ept.walk_pending:u ./cc_st -f benchmark/graphs/urand.sg -n16  > /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_urand/op_4kv  2> /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_urand/4k-4k-perf2
-######## cc_urand finish ###########
+######### cc_urand ############
+#mkdir /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_urand
+#echo "mkdir /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_urand"
+#echo " perf stat -e mem_inst_retired.all_loads:u,mem_inst_retired.all_stores:u,mem_inst_retired.stlb_miss_loads:u,mem_inst_retired.stlb_miss_stores:u ./cc_st -f benchmark/graphs/urand.sg -n16  > /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_urand/op_4kv  2> /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_urand/4k-4k-perf1"
+# perf stat -e mem_inst_retired.all_loads:u,mem_inst_retired.all_stores:u,mem_inst_retired.stlb_miss_loads:u,mem_inst_retired.stlb_miss_stores:u ./cc_st -f benchmark/graphs/urand.sg -n16  > /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_urand/op_4kv  2> /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_urand/4k-4k-perf1
+#echo " perf stat -e cycles:u,dtlb_store_misses.walk_pending:u,dtlb_load_misses.walk_pending:u,ept.walk_pending:u ./cc_st -f benchmark/graphs/urand.sg -n16  > /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_urand/op_4kv  2> /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_urand/4k-4k-perf2"
+# perf stat -e cycles:u,dtlb_store_misses.walk_pending:u,dtlb_load_misses.walk_pending:u,ept.walk_pending:u ./cc_st -f benchmark/graphs/urand.sg -n16  > /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_urand/op_4kv  2> /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_urand/4k-4k-perf2
+######### cc_urand finish ###########
 ######## bc_urand ############
-mkdir /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_urand
-echo "mkdir /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_urand"
-echo " perf stat -e mem_inst_retired.all_loads:u,mem_inst_retired.all_stores:u,mem_inst_retired.stlb_miss_loads:u,mem_inst_retired.stlb_miss_stores:u ./bc_st -f benchmark/graphs/urand.sg -i4 -n16  > /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_urand/op_4kv  2> /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_urand/4k-4k-perf1"
- perf stat -e mem_inst_retired.all_loads:u,mem_inst_retired.all_stores:u,mem_inst_retired.stlb_miss_loads:u,mem_inst_retired.stlb_miss_stores:u ./bc_st -f benchmark/graphs/urand.sg -i4 -n16  > /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_urand/op_4kv  2> /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_urand/4k-4k-perf1
-echo " perf stat -e cycles:u,dtlb_store_misses.walk_pending:u,dtlb_load_misses.walk_pending:u,ept.walk_pending:u ./bc_st -f benchmark/graphs/urand.sg -i4 -n16  > /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_urand/op_4kv  2> /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_urand/4k-4k-perf2"
- perf stat -e cycles:u,dtlb_store_misses.walk_pending:u,dtlb_load_misses.walk_pending:u,ept.walk_pending:u ./bc_st -f benchmark/graphs/urand.sg -i4 -n16  > /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_urand/op_4kv  2> /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_urand/4k-4k-perf2
-######## bc_urand finish ###########
+#mkdir /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_urand
+#echo "mkdir /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_urand"
+#echo " perf stat -e mem_inst_retired.all_loads:u,mem_inst_retired.all_stores:u,mem_inst_retired.stlb_miss_loads:u,mem_inst_retired.stlb_miss_stores:u ./bc_st -f benchmark/graphs/urand.sg -i4 -n16  > /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_urand/op_4kv  2> /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_urand/4k-4k-perf1"
+# perf stat -e mem_inst_retired.all_loads:u,mem_inst_retired.all_stores:u,mem_inst_retired.stlb_miss_loads:u,mem_inst_retired.stlb_miss_stores:u ./bc_st -f benchmark/graphs/urand.sg -i4 -n16  > /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_urand/op_4kv  2> /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_urand/4k-4k-perf1
+#echo " perf stat -e cycles:u,dtlb_store_misses.walk_pending:u,dtlb_load_misses.walk_pending:u,ept.walk_pending:u ./bc_st -f benchmark/graphs/urand.sg -i4 -n16  > /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_urand/op_4kv  2> /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_urand/4k-4k-perf2"
+# perf stat -e cycles:u,dtlb_store_misses.walk_pending:u,dtlb_load_misses.walk_pending:u,ept.walk_pending:u ./bc_st -f benchmark/graphs/urand.sg -i4 -n16  > /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_urand/op_4kv  2> /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_urand/4k-4k-perf2
+######### bc_urand finish ###########
 #echo ""
 #
 #echo ""
@@ -214,14 +214,14 @@ echo " perf stat -e cycles:u,dtlb_store_misses.walk_pending:u,dtlb_load_misses.w
 #rm -f benchmark/graphs/urandU.sg
 #echo "ln -s urand.sg benchmark/graphs/urandU.sg"
 #ln -s urand.sg benchmark/graphs/urandU.sg
-######## tc_urandU ############
-mkdir /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/tc_urandU
-echo "mkdir /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/tc_urandU"
-echo " perf stat -e mem_inst_retired.all_loads:u,mem_inst_retired.all_stores:u,mem_inst_retired.stlb_miss_loads:u,mem_inst_retired.stlb_miss_stores:u ./tc_st -f benchmark/graphs/urandU.sg -n3  > /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/tc_urandU/op_4kv  2> /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/tc_urandU/4k-4k-perf1"
- perf stat -e mem_inst_retired.all_loads:u,mem_inst_retired.all_stores:u,mem_inst_retired.stlb_miss_loads:u,mem_inst_retired.stlb_miss_stores:u ./tc_st -f benchmark/graphs/urandU.sg -n3  > /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/tc_urandU/op_4kv  2> /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/tc_urandU/4k-4k-perf1
-echo " perf stat -e cycles:u,dtlb_store_misses.walk_pending:u,dtlb_load_misses.walk_pending:u,ept.walk_pending:u ./tc_st -f benchmark/graphs/urandU.sg -n3  > /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/tc_urandU/op_4kv  2> /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/tc_urandU/4k-4k-perf2"
- perf stat -e cycles:u,dtlb_store_misses.walk_pending:u,dtlb_load_misses.walk_pending:u,ept.walk_pending:u ./tc_st -f benchmark/graphs/urandU.sg -n3  > /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/tc_urandU/op_4kv  2> /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/tc_urandU/4k-4k-perf2
-######## tc_urandU finish ###########
+######### tc_urandU ############
+#mkdir /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/tc_urandU
+#echo "mkdir /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/tc_urandU"
+#echo " perf stat -e mem_inst_retired.all_loads:u,mem_inst_retired.all_stores:u,mem_inst_retired.stlb_miss_loads:u,mem_inst_retired.stlb_miss_stores:u ./tc_st -f benchmark/graphs/urandU.sg -n3  > /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/tc_urandU/op_4kv  2> /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/tc_urandU/4k-4k-perf1"
+# perf stat -e mem_inst_retired.all_loads:u,mem_inst_retired.all_stores:u,mem_inst_retired.stlb_miss_loads:u,mem_inst_retired.stlb_miss_stores:u ./tc_st -f benchmark/graphs/urandU.sg -n3  > /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/tc_urandU/op_4kv  2> /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/tc_urandU/4k-4k-perf1
+#echo " perf stat -e cycles:u,dtlb_store_misses.walk_pending:u,dtlb_load_misses.walk_pending:u,ept.walk_pending:u ./tc_st -f benchmark/graphs/urandU.sg -n3  > /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/tc_urandU/op_4kv  2> /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/tc_urandU/4k-4k-perf2"
+# perf stat -e cycles:u,dtlb_store_misses.walk_pending:u,dtlb_load_misses.walk_pending:u,ept.walk_pending:u ./tc_st -f benchmark/graphs/urandU.sg -n3  > /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/tc_urandU/op_4kv  2> /home/akshay/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/tc_urandU/4k-4k-perf2
+######### tc_urandU finish ###########
 #echo ""
 #
 #echo ""

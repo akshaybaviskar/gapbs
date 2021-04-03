@@ -114,96 +114,96 @@
 #echo "pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_road/bc_road -- ./bc_st -f benchmark/graphs/road.sg -i4 -n16  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_road/op_2M "
 #pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_road/bc_road -- ./bc_st -f benchmark/graphs/road.sg -i4 -n16  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_road/op_2M 
 ######### bc_road finish ###########
-echo ""
-
-echo ""
-
-echo "./converter_st -g27 -k16 -b benchmark/graphs/kron.sg"
-./converter_st -g27 -k16 -b benchmark/graphs/kron.sg
-######### bfs_kron ############
-#mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_kron
-#echo "mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_kron"
-#mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_kron/VMAs
-#echo "mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_kron/VMAs"
-#echo "pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_kron/bfs_kron -- ./bfs_st -f benchmark/graphs/kron.sg -n64  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_kron/op_2M "
-#pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_kron/bfs_kron -- ./bfs_st -f benchmark/graphs/kron.sg -n64  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_kron/op_2M 
-######### bfs_kron finish ###########
-######### pr_kron ############
-#mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_kron
-#echo "mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_kron"
-#mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_kron/VMAs
-#echo "mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_kron/VMAs"
-#echo "pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_kron/pr_kron -- ./pr_st -f benchmark/graphs/kron.sg -i1000 -t1e-4 -n16  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_kron/op_2M "
-#pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_kron/pr_kron -- ./pr_st -f benchmark/graphs/kron.sg -i1000 -t1e-4 -n16  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_kron/op_2M 
-######### pr_kron finish ###########
-######### cc_kron ############
-mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_kron
-echo "mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_kron"
-mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_kron/VMAs
-echo "mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_kron/VMAs"
-echo "pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_kron/cc_kron -- ./cc_st -f benchmark/graphs/kron.sg -n16  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_kron/op_2M "
-pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_kron/cc_kron -- ./cc_st -f benchmark/graphs/kron.sg -n16  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_kron/op_2M 
-######## cc_kron finish ###########
-######## bc_kron ############
-mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_kron
-echo "mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_kron"
-mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_kron/VMAs
-echo "mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_kron/VMAs"
-echo "pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_kron/bc_kron -- ./bc_st -f benchmark/graphs/kron.sg -i4 -n16  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_kron/op_2M "
-pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_kron/bc_kron -- ./bc_st -f benchmark/graphs/kron.sg -i4 -n16  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_kron/op_2M 
-######### bc_kron finish ###########
 #echo ""
 #
 #echo ""
 #
-#echo "rm -f benchmark/graphs/kronU.sg"
-#rm -f benchmark/graphs/kronU.sg
-#echo "ln -s kron.sg benchmark/graphs/kronU.sg"
-#ln -s kron.sg benchmark/graphs/kronU.sg
-######### tc_kronU ############
-#mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/tc_kronU
-#echo "mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/tc_kronU"
-#mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/tc_kronU/VMAs
-#echo "mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/tc_kronU/VMAs"
-#echo "pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/tc_kronU/tc_kronU -- ./tc_st -f benchmark/graphs/kronU.sg -n3  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/tc_kronU/op_2M "
-#pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/tc_kronU/tc_kronU -- ./tc_st -f benchmark/graphs/kronU.sg -n3  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/tc_kronU/op_2M 
-######### tc_kronU finish ###########
-echo ""
-
-echo ""
-
-echo "./converter_st -u27 -k16 -b benchmark/graphs/urand.sg"
-./converter_st -u27 -k16 -b benchmark/graphs/urand.sg
-######### bfs_urand ############
-mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_urand
-echo "mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_urand"
-mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_urand/VMAs
-echo "mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_urand/VMAs"
-echo "pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_urand/bfs_urand -- ./bfs_st -f benchmark/graphs/urand.sg -n64  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_urand/op_2M "
-pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_urand/bfs_urand -- ./bfs_st -f benchmark/graphs/urand.sg -n64  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_urand/op_2M 
-######### bfs_urand finish ###########
-######### pr_urand ############
-#mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_urand
-#echo "mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_urand"
-#mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_urand/VMAs
-#echo "mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_urand/VMAs"
-#echo "pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_urand/pr_urand -- ./pr_st -f benchmark/graphs/urand.sg -i1000 -t1e-4 -n16  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_urand/op_2M "
-#pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_urand/pr_urand -- ./pr_st -f benchmark/graphs/urand.sg -i1000 -t1e-4 -n16  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_urand/op_2M 
-######### pr_urand finish ###########
-######### cc_urand ############
-#mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_urand
-#echo "mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_urand"
-#mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_urand/VMAs
-#echo "mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_urand/VMAs"
-#echo "pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_urand/cc_urand -- ./cc_st -f benchmark/graphs/urand.sg -n16  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_urand/op_2M "
-#pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_urand/cc_urand -- ./cc_st -f benchmark/graphs/urand.sg -n16  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_urand/op_2M 
-######### cc_urand finish ###########
-######### bc_urand ############
-#mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_urand
-#echo "mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_urand"
-#mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_urand/VMAs
-#echo "mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_urand/VMAs"
-#echo "pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_urand/bc_urand -- ./bc_st -f benchmark/graphs/urand.sg -i4 -n16  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_urand/op_2M "
+#echo "./converter_st -g27 -k16 -b benchmark/graphs/kron.sg"
+#./converter_st -g27 -k16 -b benchmark/graphs/kron.sg
+########## bfs_kron ############
+##mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_kron
+##echo "mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_kron"
+##mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_kron/VMAs
+##echo "mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_kron/VMAs"
+##echo "pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_kron/bfs_kron -- ./bfs_st -f benchmark/graphs/kron.sg -n64  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_kron/op_2M "
+##pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_kron/bfs_kron -- ./bfs_st -f benchmark/graphs/kron.sg -n64  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_kron/op_2M 
+########## bfs_kron finish ###########
+########## pr_kron ############
+##mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_kron
+##echo "mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_kron"
+##mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_kron/VMAs
+##echo "mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_kron/VMAs"
+##echo "pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_kron/pr_kron -- ./pr_st -f benchmark/graphs/kron.sg -i1000 -t1e-4 -n16  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_kron/op_2M "
+##pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_kron/pr_kron -- ./pr_st -f benchmark/graphs/kron.sg -i1000 -t1e-4 -n16  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_kron/op_2M 
+########## pr_kron finish ###########
+########## cc_kron ############
+#mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_kron
+#echo "mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_kron"
+#mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_kron/VMAs
+#echo "mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_kron/VMAs"
+#echo "pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_kron/cc_kron -- ./cc_st -f benchmark/graphs/kron.sg -n16  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_kron/op_2M "
+#pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_kron/cc_kron -- ./cc_st -f benchmark/graphs/kron.sg -n16  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_kron/op_2M 
+######### cc_kron finish ###########
+######### bc_kron ############
+#mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_kron
+#echo "mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_kron"
+#mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_kron/VMAs
+#echo "mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_kron/VMAs"
+#echo "pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_kron/bc_kron -- ./bc_st -f benchmark/graphs/kron.sg -i4 -n16  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_kron/op_2M "
+#pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_kron/bc_kron -- ./bc_st -f benchmark/graphs/kron.sg -i4 -n16  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_kron/op_2M 
+########## bc_kron finish ###########
+##echo ""
+##
+##echo ""
+##
+##echo "rm -f benchmark/graphs/kronU.sg"
+##rm -f benchmark/graphs/kronU.sg
+##echo "ln -s kron.sg benchmark/graphs/kronU.sg"
+##ln -s kron.sg benchmark/graphs/kronU.sg
+########## tc_kronU ############
+##mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/tc_kronU
+##echo "mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/tc_kronU"
+##mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/tc_kronU/VMAs
+##echo "mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/tc_kronU/VMAs"
+##echo "pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/tc_kronU/tc_kronU -- ./tc_st -f benchmark/graphs/kronU.sg -n3  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/tc_kronU/op_2M "
+##pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/tc_kronU/tc_kronU -- ./tc_st -f benchmark/graphs/kronU.sg -n3  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/tc_kronU/op_2M 
+########## tc_kronU finish ###########
+#echo ""
+#
+#echo ""
+#
+#echo "./converter_st -u27 -k16 -b benchmark/graphs/urand.sg"
+#./converter_st -u27 -k16 -b benchmark/graphs/urand.sg
+########## bfs_urand ############
+#mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_urand
+#echo "mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_urand"
+#mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_urand/VMAs
+#echo "mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_urand/VMAs"
+#echo "pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_urand/bfs_urand -- ./bfs_st -f benchmark/graphs/urand.sg -n64  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_urand/op_2M "
+#pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_urand/bfs_urand -- ./bfs_st -f benchmark/graphs/urand.sg -n64  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bfs_urand/op_2M 
+########## bfs_urand finish ###########
+########## pr_urand ############
+##mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_urand
+##echo "mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_urand"
+##mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_urand/VMAs
+##echo "mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_urand/VMAs"
+##echo "pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_urand/pr_urand -- ./pr_st -f benchmark/graphs/urand.sg -i1000 -t1e-4 -n16  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_urand/op_2M "
+##pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_urand/pr_urand -- ./pr_st -f benchmark/graphs/urand.sg -i1000 -t1e-4 -n16  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/pr_urand/op_2M 
+########## pr_urand finish ###########
+########## cc_urand ############
+##mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_urand
+##echo "mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_urand"
+##mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_urand/VMAs
+##echo "mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_urand/VMAs"
+##echo "pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_urand/cc_urand -- ./cc_st -f benchmark/graphs/urand.sg -n16  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_urand/op_2M "
+##pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_urand/cc_urand -- ./cc_st -f benchmark/graphs/urand.sg -n16  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/cc_urand/op_2M 
+########## cc_urand finish ###########
+########## bc_urand ############
+##mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_urand
+##echo "mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_urand"
+##mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_urand/VMAs
+##echo "mkdir /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_urand/VMAs"
+echo "pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_urand/bc_urand -- ./bc_st -f benchmark/graphs/urand.sg -i4 -n16  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_urand/op_2M "
 #pin -t /home/akshaybavisk/work/pin-3.16-98275-ge0db48c31-gcc-linux/source/tools/ManualExamples/obj-intel64/SamplingSimulator.so -o /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_urand/bc_urand -- ./bc_st -f benchmark/graphs/urand.sg -i4 -n16  > /home/akshaybavisk/work/Yaniv/home/idanyani/hash-vs-radix/benchmarks/bc_urand/op_2M 
 ######### bc_urand finish ###########
 #echo ""
